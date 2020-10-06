@@ -4,7 +4,6 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
 <html>
 	<head>
 		<title>CAS Network</title>
@@ -47,7 +46,14 @@
 							<article id="intro">
 								<h2 class="major">Intro</h2>
 								<span class="image main"><img src="images/GS_field.jpg" alt="" /></span>
-								<p>Historically, the visual classification of a galaxy's morphology has been a useful probe of galactic structure and evolution. High redshift galaxies however, are harder to classify as many features are lost due to redshift effects. They are intrinsically limited in anycase in the distant universe.  Non-parametric measurements such as the CAS system are hence, one way to analyse and quantify a galaxy based on its stellar light distribution.   Measuring them is however a time-consuming process.  To address this we have trained a Convolutional Neural Network using a Bayesian optimization of hyperparameters to predict the concentration (C) and asymmetry (A) of a galaxy based on a single input image. You can try the network for yourself <a href="#network">here</a>.</p>
+								<p>
+								Distant, high redshift galaxies are difficult to classify based on their morphology due to the lack of features caused by cosmological dimming. One method chosen to classify these galaxies is hence based on their stellar light distributions. We investigate two such parameters, the concentration and asymmetry of a galaxy. Future ‘Big Data’ surveys will image billions of galaxies making it computationally infeasible to calculate these values using current methods. One possible solution to this is machine learning. Machine learning networks can process much larger datasets at a much quicker rate than conventional methods.</p>
+								<p>In this work we have trained a Convolutional Neural Network (CNN) to predict both the concentration and asymmetry values of a galaxy. 
+								Our trained network is able to reproduce these values well, with the average difference between the networks prediction and the measured value being lower than the average error on each measurement. Our network is also ~ 3,000 times quicker than previous algorithms. 
+ 								You can try the network for yourself <a href="#network">here</a>.</p>
+								<p>
+
+
 								
 							</article>
 
@@ -70,8 +76,8 @@
 						<!-- Network -->
 							<article id="network">
 								<h2 class="major">Network</h2>
-								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-								<p>Place network here.</p>
+								<span class="image main"><img src="images/A_net.png" alt="" /></span>
+								<p>The above image shows the architecture of our asymmetry network. The network takes input images of size 60 x 60 pixels, followed by 3 convolutional blocks with 2 convolutional layers of sizes 32, 64 and 128 respectively. Each layer is followed by an average pooling layer of size 2 and a batch normalisation layer. Finally there are 2 fully connected layers of size 1024 each, which is followed by dropout of 0.5 before the output value, i.e the networks prediction of the asymmetry.</p>
 							</article>
 
 						<!-- Contact -->
