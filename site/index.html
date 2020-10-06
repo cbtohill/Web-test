@@ -3,10 +3,21 @@
 <head>
 	<title>CAS Network</title>
 </head>
-<body>
-<h1><center>Asymmetry and Concentration with Deep Learning</center></h1>
 
-<body><center> <font size=5>Training a Convolutional Neural Network to predict the Concentration and Asymmetry parameters for a galaxy.</font></center></body>
+<style>
+.sansserif {
+  font-family: 'Roboto', Helvetica, sans-serif;
+}
+
+.cas {font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+</style>
+
+
+<body style="background-color:white;">
+<h1 class="cas"><center>Asymmetry and Concentration with Deep Learning</center></h1>
+
+<body class="cas"><center> <font size=5>Training a Convolutional Neural Network to predict the Concentration and Asymmetry parameters from a galaxy image.</font></center></body>
 
 <h2>Concentration</h2>
 <body>The Concentration (C) parameter is simply a measure of how concentrated the light from the central region of a galaxy is compared to the outer parts. This can tell us if a galaxy has a disk structure, is more elliptical, or is an irregular type galaxy. 
@@ -14,7 +25,7 @@ It is calculated using the ratio of two radii that contain a predefined amount o
 For our measurements we use the ratio of the radii containing 80% and 20% of the total light. 
 <p></p>
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=C&space;=&space;5log(\frac{r_{80}}{r_{20}})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C&space;=&space;5log(\frac{r_{80}}{r_{20}})" title="C = 5log(\frac{r_{80}}{r_{20}})" /></a>
+<center><a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{100}&space;\large&space;C&space;=&space;5log\left&space;(&space;\frac{r_{80}}{r_{20}}&space;\right&space;)" target="_blank"><img src="https://latex.codecogs.com/png.latex?\dpi{100}&space;\large&space;C&space;=&space;5log\left&space;(&space;\frac{r_{80}}{r_{20}}&space;\right&space;)" title="\large C = 5log\left ( \frac{r_{80}}{r_{20}} \right )" /></a></center>
 </body>
 
 <h2>Asymmetry</h2>
@@ -22,7 +33,7 @@ For our measurements we use the ratio of the radii containing 80% and 20% of the
 It is calculated by rotating the image 180° and subtracting it from the pre-rotated image. The residuals are then summed and divided by the original galaxy flux.  </body>
 <p></p>
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=A&space;=&space;\left&space;(&space;\frac{\left&space;|&space;I&space;-&space;R_{180}&space;\right&space;|}{I}&space;\right&space;)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?A&space;=&space;\left&space;(&space;\frac{\left&space;|&space;I&space;-&space;R_{180}&space;\right&space;|}{I}&space;\right&space;)" title="A = \left ( \frac{\left | I - R_{180} \right |}{I} \right )" /></a>
+<center><a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{100}&space;\large&space;A&space;=&space;\left&space;(\frac{\left&space;|&space;I&space;-&space;R_{180}&space;\right&space;|}{I}&space;\right&space;)" target="_blank"><img src="https://latex.codecogs.com/png.latex?\dpi{100}&space;\large&space;A&space;=&space;\left&space;(\frac{\left&space;|&space;I&space;-&space;R_{180}&space;\right&space;|}{I}&space;\right&space;)" title="\large A = \left (\frac{\left | I - R_{180} \right |}{I} \right )" /></a></center>
 
 
 
