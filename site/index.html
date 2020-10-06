@@ -5,35 +5,51 @@
 </head>
 
 <style>
+#rcorners1 {
+  border-radius: 25px;
+  border: 2px solid white ;
+  background: #311B92  ;
+  padding: 20px; 
+  width: 850px;
+  height: 50px;  
+}
+
+
 .sansserif {
   font-family: 'Roboto', Helvetica, sans-serif;
 }
 
 .cas {font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
+
 </style>
 
 
-<body style="background-color:white;">
-<h1 class="cas"><center>Asymmetry and Concentration with Deep Learning</center></h1>
+<body style="background-color:black;">
+<h1 class="cas" style="color: white"><center><p id="rcorners1">Asymmetry and Concentration with Deep Learning</p></center></h1>
 
-<body class="cas"><center> <font size=5>Training a Convolutional Neural Network to predict the Concentration and Asymmetry parameters from a galaxy image.</font></center></body>
+<body class="cas"><center> <font size=5 style="color: white">Training a Convolutional Neural Network to predict the Concentration and Asymmetry parameters for a galaxy.</font></center></body>
 
-<h2>Concentration</h2>
-<body>The Concentration (C) parameter is simply a measure of how concentrated the light from the central region of a galaxy is compared to the outer parts. This can tell us if a galaxy has a disk structure, is more elliptical, or is an irregular type galaxy. 
+<h2 style="color: white">Concentration</h2>
+<body><font style="color: white">
+The Concentration (C) parameter is simply a measure of how concentrated the light from the central region of a galaxy is compared to the outer parts. This can tell us if a galaxy has a disk structure, is more elliptical, or is an irregular type galaxy. 
 It is calculated using the ratio of two radii that contain a predefined amount of light from the galaxy. 
 For our measurements we use the ratio of the radii containing 80% and 20% of the total light. 
+</font>
 <p></p>
 
-<center><a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{100}&space;\large&space;C&space;=&space;5log\left&space;(&space;\frac{r_{80}}{r_{20}}&space;\right&space;)" target="_blank"><img src="https://latex.codecogs.com/png.latex?\dpi{100}&space;\large&space;C&space;=&space;5log\left&space;(&space;\frac{r_{80}}{r_{20}}&space;\right&space;)" title="\large C = 5log\left ( \frac{r_{80}}{r_{20}} \right )" /></a></center>
+<center><a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\large&space;{\color{white}&space;C&space;=&space;5log\left&space;(&space;\frac{r_{80}}{r_{20}}&space;\right&space;)}" target="_blank"><img src="https://latex.codecogs.com/png.latex?\dpi{120}&space;\large&space;{\color{white}&space;C&space;=&space;5log\left&space;(&space;\frac{r_{80}}{r_{20}}&space;\right&space;)}" title="\large {\color{white} C = 5log\left ( \frac{r_{80}}{r_{20}} \right )}" /></a></center>
 </body>
 
-<h2>Asymmetry</h2>
-<body>The Asymmetry (A) value is a measure of how asymmetric the galaxy light is, meaning galaxies that are undergoing a merging event with another galaxy will have high A values most of the time. The A value of a large sample of galaxies can then be used to estimate the merger fraction which is important in galaxy evolution models.
-It is calculated by rotating the image 180° and subtracting it from the pre-rotated image. The residuals are then summed and divided by the original galaxy flux.  </body>
+<h2 style="color: white">Asymmetry</h2>
+<body><font style="color: white">
+
+The Asymmetry (A) value is a measure of how asymmetric the galaxy light is, meaning galaxies that are undergoing a merging event with another galaxy will have high A values most of the time. The A value of a large sample of galaxies can then be used to estimate the merger fraction which is important in galaxy evolution models.
+It is calculated by rotating the image 180° and subtracting it from the pre-rotated image. The residuals are then summed and divided by the original galaxy flux.  
+</font></body>
 <p></p>
 
-<center><a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{100}&space;\large&space;A&space;=&space;\left&space;(\frac{\left&space;|&space;I&space;-&space;R_{180}&space;\right&space;|}{I}&space;\right&space;)" target="_blank"><img src="https://latex.codecogs.com/png.latex?\dpi{100}&space;\large&space;A&space;=&space;\left&space;(\frac{\left&space;|&space;I&space;-&space;R_{180}&space;\right&space;|}{I}&space;\right&space;)" title="\large A = \left (\frac{\left | I - R_{180} \right |}{I} \right )" /></a></center>
+<center><a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\large&space;{\color{white}&space;A&space;=&space;\left&space;(\frac{\left&space;|&space;I&space;-&space;R_{180}&space;\right&space;|}{I}&space;\right&space;)}" target="_blank"><img src="https://latex.codecogs.com/png.latex?\dpi{120}&space;\large&space;{\color{white}&space;A&space;=&space;\left&space;(\frac{\left&space;|&space;I&space;-&space;R_{180}&space;\right&space;|}{I}&space;\right&space;)}" title="\large {\color{white} A = \left (\frac{\left | I - R_{180} \right |}{I} \right )}" /></a></center>
 
 
 
